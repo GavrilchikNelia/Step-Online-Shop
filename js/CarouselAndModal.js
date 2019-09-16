@@ -287,5 +287,3 @@ $('#myCarouselTab4 .carousel-item-imgs').on('click', function() {
     if ($(window).width() >= 768) {
         $('#newsletter').attr('size', '62');
     }
-
-
