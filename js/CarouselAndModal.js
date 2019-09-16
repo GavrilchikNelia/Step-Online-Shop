@@ -273,7 +273,7 @@ $('#myCarouselTab4 .carousel-item-imgs').on('click', function() {
     $('#sliderScreenTab4').carousel(indexSlide);
 });
 
-$(document).on('change', function () {
+// $(document).on('change', function () {
     if ($(window).width() >= 480) {
         $('#newsletter').attr('size', '48');
     }
@@ -287,5 +287,5 @@ $(document).on('change', function () {
     if ($(window).width() >= 768) {
         $('#newsletter').attr('size', '62');
     }
-});
+// });
 
