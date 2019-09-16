@@ -1,0 +1,1899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<section id="navbarSection">
+    <div class="navbar-bg">
+        <div class="navbar-bg-top"></div>
+        <div class="container">
+            <div class="row navbar-pos mx-0">
+                <div class="col-7 px-0">
+                    <ul class="list-unstyled list-inline my-0 font-085rem">
+                        <li class="list-inline-item text-light navbar-li-position-1">USD</li>
+                        <li class="list-inline-item text-light navbar-li-position-1">English</li>
+                        <li class="list-inline-item text-light"><a class="link-decoration position-relative">Help</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-5 text-right px-0">
+                    <ul class="list-unstyled list-inline my-0 font-085rem flex-nowrap">
+                        <li class="list-inline-item navbar-li-position-2"><a id="linkLoginUser"><i class="fa fa-user text-light icon-right" aria-hidden="true"></i><span class="text-light  link-decoration position-relative">Login</span></a></li>
+                        <li class="list-inline-item "><a id="linkRegister"><i class="fa fa-lock text-light icon-right" aria-hidden="true"></i><span class="text-light link-decoration position-relative">Register</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade " id="modalRegister" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-width mx-auto position-relative modal-content-border">
+                <div class="modal-body  p-5">
+                    <h2 class="modal-title register-modal-title text-uppercase">REGISTRATION</h2>
+                    <button type="button" class="btn btn-modal-close  position-absolute btn-dark" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fa fa-times " aria-hidden="true"></i></span>
+                    </button>
+                    <form action="#">
+                        <input id='Name' class="w-100 input-register-size" type="text" placeholder="Name*" required>
+                        <input id='Email' class="w-100 input-register-size" type="email"  placeholder="Email*" required>
+                        <input id='Password' class="w-100 input-register-size" type="password"  placeholder="Password*" required>
+                    </form>
+                    <button type="button" class="btn btn-dark btn-register font-weight-bold text-uppercase">REGISTER</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="modal fade " id="modalLogIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content modal-width mx-auto position-relative modal-content-border">
+                <div class="modal-body  p-5">
+                    <h2 class="modal-title register-modal-title text-uppercase">LOGIN</h2>
+                    <button type="button" class="btn btn-modal-close position-absolute btn-dark" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fa fa-times " aria-hidden="true"></i></span>
+                    </button>
+                    <form action="#">
+                        <input id='userName' class="w-100 input-register-size" type="text" placeholder="Name/Login*" required>
+                        <input id='userPassword' class="w-100 input-register-size" type="password"  placeholder="Password*" required>
+                    </form>
+                    <button type="button" class="btn btn-dark btn-login font-weight-bold text-uppercase">LOGIN</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section id="furnitureGaleryCarousel" class="container d-flex justify-content-center my-2">
+    <div class="carousel-width-const px-0">
+        <h5 class="text-uppercase title-section">furniture gallery</h5>
+        <div class="row pt-1  w-100 line-position mx-auto">
+            <span class="col-1 title-line px-0"></span><span class="col-11 title-line-big px-0"></span>
+        </div>
+        <ul class="nav nav-tabs mt-4">
+            <li class="nav-item w-25 tabs-border-radius tabs-border-color">
+                <a class="nav-link active font-weight-bold text-uppercase fs-14 text-center tabs-link-color" data-toggle="tab" href="#featured">F<span class="fs-11">EATURED</span></a>
+            </li>
+            <li class="nav-item w-25 tabs-border-radius tabs-border-color">
+                <a class="nav-link text-uppercase font-weight-bold fs-12 text-center tabs-link-color" data-toggle="tab" href="#top">top seller</a>
+            </li>
+            <li class="nav-item w-25 tabs-border-radius tabs-border-color">
+                <a class="nav-link text-uppercase font-weight-bold fs-14 text-center tabs-link-color" data-toggle="tab" href="#sale">sale off</a>
+            </li>
+            <li class="nav-item w-25 tabs-border-radius tabs-border-color">
+                <a class="nav-link text-uppercase font-weight-bold fs-14 text-center tabs-link-color" data-toggle="tab" href="#rated">top rated</a>
+            </li>
+
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+<!--            Tab 1-->
+            <div id="featured" class=" tab-pane active">
+                <div id="sliderScreen" class="carousel slider slider-screen row w-100 h-auto overflow-hidden mx-auto mt-0 slider-border">
+                    <div class="carousel-inner slider-main-img overflow-hidden mb-0 position-relative">
+                        <div class="carousel-item active " data-pos="1">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_10.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo10">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="2">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_11.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo11">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="3">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_12.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo12">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="4">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_13.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo13">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="5">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_14.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo14">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="6">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_15.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo15">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="7">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_16.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo16">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="8">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_17.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo17">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="9">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_18.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo18">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="10">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_19.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute" >
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo19">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="11">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_20.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo20">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mx-auto my-auto slider-border my-1">
+                    <div id="myCarousel" class="carousel row mx-0 my-1 slide w-100">
+                        <a class="carousel-control-prev col-1 bg-dark carousel-btn ml-1" href="#myCarousel" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </a>
+                        <div class="carousel-inner col-10 w-100  mx-auto" role="listbox">
+
+                            <div class="carousel-item active">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="0">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_10.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="1">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_11.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="2">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_12.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="3">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_13.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="4">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_14.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="5">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_15.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="6">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_16.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="7">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_17.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="8">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_18.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="9">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_19.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="10">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_20.png"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-next col-1 bg-dark carousel-btn mr-1" href="#myCarousel" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+<!--            tab 2-->
+            <div id="top" class=" tab-pane fade"><br>
+                <div id="sliderScreenTab2" class="carousel slider slider-screen row w-100 h-auto overflow-hidden mx-auto mt-0 slider-border">
+                    <div class="carousel-inner slider-main-img overflow-hidden mb-0 position-relative">
+                        <div class="carousel-item active " data-pos="1">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_10.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo10">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="2">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_11.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo11">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="3">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_12.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo12">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="4">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_13.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo13">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="5">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_14.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo14">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="6">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_15.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo15">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="7">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_16.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo16">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="8">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_17.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo17">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="9">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_18.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo18">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="10">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_19.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute" >
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo19">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="11">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_20.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo20">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mx-auto my-auto slider-border my-1">
+                    <div id="myCarouselTab2" class="carousel row mx-0 my-1 slide w-100">
+                        <a class="carousel-control-prev col-1 bg-dark carousel-btn ml-1" href="#myCarouselTab2" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </a>
+                        <div class="carousel-inner col-10 w-100  mx-auto" role="listbox">
+
+                            <div class="carousel-item active">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="0">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_10.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="1">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_11.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="2">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_12.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="3">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_13.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="4">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_14.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="5">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_15.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="6">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_16.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="7">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_17.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="8">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_18.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="9">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_19.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="10">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_20.png"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-next col-1 bg-dark carousel-btn mr-1" href="#myCarouselTab2" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+<!--            tab 3-->
+            <div id="sale" class=" tab-pane fade"><br>
+                <div id="sliderScreenTab3" class="carousel slider slider-screen row w-100 h-auto overflow-hidden mx-auto mt-0 slider-border">
+                    <div class="carousel-inner slider-main-img overflow-hidden mb-0 position-relative">
+                        <div class="carousel-item active " data-pos="1">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_10.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo10">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="2">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_11.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo11">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="3">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_12.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo12">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="4">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_13.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo13">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="5">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_14.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo14">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="6">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_15.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo15">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="7">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_16.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo16">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="8">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_17.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo17">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="9">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_18.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo18">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="10">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_19.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute" >
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo19">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="11">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_20.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo20">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mx-auto my-auto slider-border my-1">
+                    <div id="myCarouselTab3" class="carousel row mx-0 my-1 slide w-100">
+                        <a class="carousel-control-prev col-1 bg-dark carousel-btn ml-1" href="#myCarouselTab3" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </a>
+                        <div class="carousel-inner col-10 w-100  mx-auto" role="listbox">
+
+                            <div class="carousel-item active">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="0">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_10.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="1">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_11.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="2">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_12.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="3">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_13.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="4">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_14.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="5">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_15.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="6">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_16.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="7">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_17.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="8">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_18.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="9">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_19.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="10">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_20.png"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-next col-1 bg-dark carousel-btn mr-1" href="#myCarouselTab3" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+<!--            tab 4-->
+            <div id="rated" class=" tab-pane fade"><br>
+                <div id="sliderScreenTab4" class="carousel slider slider-screen row w-100 h-auto overflow-hidden mx-auto mt-0 slider-border">
+                    <div class="carousel-inner slider-main-img overflow-hidden mb-0 position-relative">
+                        <div class="carousel-item active " data-pos="1">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_10.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo10">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="2">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_11.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo11">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="3">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_12.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo12">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="4">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_13.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo13">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="5">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_14.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo14">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="6">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_15.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo15">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="7">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_16.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo16">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="8">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_17.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo17">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="9">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_18.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo18">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting  shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="10">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_19.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute" >
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo19">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+                        <div class="carousel-item " data-pos="11">
+                            <img class="slider-main-img-Screen position-absolute" src="img/products/step-project-online-shop_img_products_top-seller_20.png"/>
+                            <div class="d-flex flex-column icons-pos position-absolute">
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center " data-toggle="tooltip" title="Add to card" data-placement="left">
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size mb-1 justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Quick view" data-placement="left" data-toogle="modal" data-target="#modalInfo20">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                                <div class="slider-main-img-icon icons-size justify-content-center d-flex align-items-center" data-toggle="tooltip" title="Add to wishlist" data-placement="left">
+                                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="reiting shadow-sm position-absolute">
+                                <div class="reiting-wrap position-reletive">
+                                    <div class="triple-top"></div>
+                                    <div class="triple-bottom position-absolute"></div>
+                                    <h6 class="text-center">Aenean Ru Bristique</h6>
+                                    <div class="stars d-flex justify-content-center">
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                        <i class="fa fa-star-o " aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slider-price rounded-circle position-absolute">
+                                <h5 class="text-center text-light slider-price-actual font-weight-bold">$120.00</h5>
+                                <h6 class="text-center text-light"><s>$160.00</s></h6>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row mx-auto my-auto slider-border my-1">
+                    <div id="myCarouselTab4" class="carousel row mx-0 my-1 slide w-100">
+                        <a class="carousel-control-prev col-1 bg-dark carousel-btn ml-1" href="#myCarouselTab4" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        </a>
+                        <div class="carousel-inner col-10 w-100  mx-auto" role="listbox">
+
+                            <div class="carousel-item active">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="0">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_10.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="1">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_11.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="2">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_12.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="3">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_13.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="4">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_14.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="5">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_15.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="6">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_16.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="7">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_17.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="8">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_18.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="9">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_19.png"/>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="col-2 carousel-item-pos px-0 slider-screen carousel-item-imgs position-relative" data-num="10">
+                                    <img class="carousel-item-img" src="img/products/step-project-online-shop_img_products_top-seller_20.png"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a class="carousel-control-next col-1 bg-dark carousel-btn mr-1" href="#myCarouselTab4" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-bedroom ml-3">
+        <h1 class="text-success font-weight-bolder fs-50 pt-5 pl-5"><span class="text-dark fs-14 font-weight-bolder">FROM</span>$50.80</h1>
+        <h1 class="fs-48 title-section font-weight-bold pl-5">Bedroom Bed</h1>
+        <a href="#" class="btn btn-success text-uppercase font-weight-bolder py-3 px-4 mt-5 ml-5">shop now</a>
+        <img class="banner-bedroom-img ml-4 mt-4" src="img/step-project-online-shop_img_products_bedroom-bed-banner.png" />
+    </div>
+</section>
+<section id="newslettersSection" class="newsletters-bg ">
+    <div class="container py-4 px-0 d-flex justify-content-center flex-nowrap align-items-center">
+    <h4 class="title-section pr-1  pr-sm-3 mb-0 fs-22 newsletters-title">NEWSLETTER:</h4>
+        <form action="#" id="newsletters" class="py-3">
+            <label class="input-wrapper position-relative ">
+                <input id="newsletter" type="text" class="input-newsletters p-2" placeholder="           Subscribe to newsletter" size="26" required/>
+                <i class="fa fa-envelope position-absolute" aria-hidden="true"></i>
+                <span class="icon-line position-absolute"></span>
+            </label>
+            <button class="btn letter-btn "><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+        </form>
+    </div>
+</section>
+<section id="footerSection" class="footer-bg">
+    <div class="container d-flex justify-content-center">
+        <div class="row mx-0 pt-3 pb-1  footer-link-width">
+            <div class="pt-3 pb-2  col-6 col-lg-3">
+                <h4 class="fs-22-footer font-weight-bold text-light pt-4 pb-4">INFORMATION</h4>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6 class="pb-1">About us</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Privacy</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Conditions</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Online support</h6></a>
+            </div>
+            <div class="pt-3 pb-2  col-6 col-lg-3">
+                <h4 class="fs-22-footer font-weight-bold text-light pt-4 pb-4">MY ACCOUNT</h4>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6 class="pb-1">Login</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>My Cart</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Wishlist</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Checkout</h6></a>
+            </div>
+            <div class="pt-3 pb-2  col-6 col-lg-3">
+                <h4 class="fs-22-footer font-weight-bold text-light pt-4 pb-4">INFORMATION</h4>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6 class="pb-1">Specials</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>New Products</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Best Sellers</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Our Stores</h6></a>
+            </div>
+            <div class="pt-3 pb-2 col-6 col-lg-3">
+                <h4 class="fs-22-footer font-weight-bold text-light pt-4 pb-4">ORDERS</h4>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6 class="pb-1">Payment options</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Shipping and delivery</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Returns</h6></a>
+                <a href="#" class="link-decoration position-relative text-white-50"><h6>Shipping</h6></a>
+                <div class="pt-3 row pl-3 pb-4 pb-lg-5 mr-0 d-flex pay-cards-width">
+                    <img class="mr-2 mt-2 card-icon" src="img/cards/step-project-online-shop_img_cards_blue-card.png" />
+                    <img class="mr-2 mt-2 card-icon" src="img/cards/step-project-online-shop_img_cards_dacover.png" />
+                    <img class="mr-2 mt-2 card-icon card-icon-pos" src="img/cards/step-project-online-shop_img_cards_master-card.png" />
+                    <img class="mr-2 mt-2 card-icon" src="img/cards/step-project-online-shop_img_cards_paypal.png" />
+                    <img class="mr-2 mt-2 card-icon" src="img/cards/step-project-online-shop_img_cards_visa.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="copyrightSection" class="copyright-bg">
+    <div class="container ">
+        <div class="row w-100 d-flex justify-content-center justify-content-md-between justify-content-xl-center">
+            <div class="col-12 col-md-8 col-xl-10 text-center">
+            <h6 class=" text-white-50 pt-4">&copy; Copyright 2016 Bazar | All Rights Reserved</h6>
+            </div>
+            <div class="col-12  col-md-4 col-xl-2 d-flex justify-content-center py-4">
+                <i class="fa fa-twitter pr-4 copyright-icon" aria-hidden="true"></i>
+                <i class="fa fa-facebook copyright-icon pr-4" aria-hidden="true"></i>
+                <i class="fa fa-youtube copyright-icon pr-4" aria-hidden="true"></i>
+                <i class="fa fa-linkedin copyright-icon pr-4" aria-hidden="true"></i>
+                <i class="fa fa-pinterest-p copyright-icon" aria-hidden="true"></i>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-bg-bottom"></div>
+</section>
+
+<script src="js/CarouselAndModal.js"></script>
+</body>
+</html>
