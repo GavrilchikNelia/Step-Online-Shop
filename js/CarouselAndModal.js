@@ -287,7 +287,3 @@ if ($(window).width() >= 575) {
 if ($(window).width() >= 768) {
     $('#newsletter').attr('size', '62');
 }
-
-// $('.slider-main-img-icon').onmouseover( function () {
-//
-// });
