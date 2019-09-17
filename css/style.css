@@ -476,3 +476,357 @@
         height: 284px;
     }
 }
+
+                          /*section student 3 !!!!!!!!!!!!!!!!!!!*/
+.stocks-img1 {
+    background-image: url("../img/stocks/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stocks-img2 {
+    background-color: #e8edf7;
+    width: 100% !important;
+}
+
+.stocks-img3 {
+    background-color: #fbf3f7;
+    width: 100% !important;
+}
+
+.opacity {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.border-3 {
+    border-width:3px !important;
+}
+
+.pTop {
+    padding-top: 180px !important;
+}
+
+.font-light {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.no-underline {
+    text-decoration: none !important;
+}
+
+.hr-size {
+    height: 0.5px;
+    background-color: #000000;
+}
+
+.far {
+    color: #afafaf;
+}
+
+.furniture-hr {
+    position: relative;
+}
+
+.furniture-box {
+    width: 100%;
+}
+
+.furniture-card {
+    width: 33%;
+}
+
+.furniture-hr::before {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: #d58e32;
+    position: absolute;
+    left: 50%;
+    bottom: -1px;
+    transform: translate(-50%);
+}
+
+.link {
+    cursor: pointer;
+    width: 45px;
+}
+
+.furniture-card-img {
+    background-color: #f4f5f7;
+}
+
+.furniture-card:hover .furniture-card-text {
+    color: #d58e32 !important;
+    transition-duration: 0.4s;
+}
+
+.furniture-card:hover .furniture-card-link {
+    background-color: #d58e32 !important;
+    transition-duration: 0.4s;
+}
+
+.furniture-price {
+    text-decoration: line-through;
+}
+
+.furniture-sale {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
+}
+
+.furniture-sale-item {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    width: 100%;
+    visibility: hidden;
+}
+
+.furniture-sale-link {
+    cursor: pointer;
+}
+
+.furniture-card:hover .furniture-sale-item {
+    visibility: visible;
+    transition-duration: 0.4s;
+}
+
+.furniture-card:hover .furniture-sale {
+    display: block !important;
+    transition-duration: 0.4s;
+}
+
+.furniture-img {
+    height: 255px !important;
+}
+
+.filter-list:hover .filter-item {
+    color: #d58e32 !important;
+}
+.filter-list:hover .filter-count {
+    background-color: #d58e32 !important
+}
+
+.filter-list:target .filter-item {
+    color: #d58e32 !important;
+}
+
+.bg-pink {
+    background-color: #f72fe4 !important;
+}
+
+.span-checkbox {
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    position: relative;
+    border-radius:2px;
+    padding:3px;
+}
+
+[type=checkbox]:checked + .span-checkbox:before {
+    color: #ffffff;
+    content: '\2713';
+    position: absolute;
+    top: -4px;
+    left: 1;
+    font-size: 15px;
+}
+
+.span-checkbox1 {
+    height: 14px;
+    width: 14px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid black;
+    border-radius:2px;
+    padding:3px;
+}
+
+[type=checkbox]:checked + .span-checkbox1:before {
+    color: #ffffff;
+    content: '\2713';
+    position: absolute;
+    top: -5px;
+    left: 1;
+    font-size: 15px;
+}
+
+[type=checkbox]:checked + .span-checkbox1 {
+    background-color: orange;
+    border: 0;
+}
+
+.span-checkbox2 {
+    display: inline-block;
+    border-radius:2px;
+    padding:3px;
+}
+
+.span-checkbox2:hover {
+    color: #d58e32 !important;
+    border-color: #d58e32 !important;
+}
+
+[type=checkbox]:checked + .span-checkbox2 {
+    color: #d58e32 !important;
+    border-color: #d58e32 !important;
+}
+
+.filter-size:hover  .filter-count1 {
+    background-color: #d58e32 !important;
+}
+
+.modal-furniture {
+    right: 200px;
+    min-width: 800px !important;
+}
+
+.blog-line {
+    height: 3px;
+    width: 100%;
+}
+
+.bg-grey {
+    background-color: #e2e2e2;
+}
+
+.blog-caption {
+    color: #d58e32;
+}
+
+.blog-angle:hover {
+    border-color: transparent !important;
+    background-color: #d58e32;
+}
+
+.blog-angle:hover > .fas{
+    color: #ffffff !important;
+}
+
+.blog-rounder:hover {
+    background-color: #d58e32 !important;
+}
+
+.blog-line::before {
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: #d58e32;
+    position: absolute;
+    left: 0;
+}
+
+.font-none {
+    font-size: 0;
+}
+
+.font-normal {
+    font-size: 20px;
+}
+
+.blog-text14 {
+    font-size: 14px;
+}
+
+.blog-item-info {
+    top: -50px;
+    width: 90%;
+}
+
+.blog-item:hover .blog-btn {
+    background-color: #d58e32 !important;
+    transition-duration: 0.4s;
+}
+
+.blog-item:hover .blog-caption{
+    color: #d58e32 !important;
+    transition-duration: 0.4s;
+}
+
+.blog-img {
+    width: 360px;
+    height: 290px;
+}
+
+@media screen and (max-width: 1100px) {
+    .blog-img {
+        width: 300px;
+        height: 230px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .blog-img {
+        width: 250px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .blog-img {
+        width: 230px;
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .modal-furniture {
+        right: 0;
+        min-width: 550px !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .modal-furniture {
+        right: 0;
+        min-width: 400px !important;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .px-20 {
+        padding: 0 15% !important;
+    }
+
+    .stocks-img-smole {
+        height: 140px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .blog-img {
+        width: 360px;
+        height: 290px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .blog-img {
+        width: 300px;
+        height: 230px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .stocks-img-smole {
+        height: 100px;
+    }
+
+    .stocks-h1, .stocks-h3, .stocks-h4  {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .blog-img {
+        width: 250px;
+        height: 190px;
+    }
+}

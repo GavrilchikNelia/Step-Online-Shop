@@ -5,13 +5,12 @@
     <title>Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+          integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
+
 <body>
 <section id="navbarSection">
     <div class="navbar-bg">
@@ -73,6 +72,1130 @@
         </div>
     </div>
 </section>
+
+<section class="stocks my-4" id="stocks">      <!--Stocks section-->
+    <div class="container">
+        <div class="row">
+            <a href="#"
+               class="stocks-img1 no-underline mr-xl-4 col-xl-6 mb-sm-4 mb-xl-0 col-md-12 d-none d-sm-block">
+                <div class="opacity pTop m-4 p-3 text-white">
+                    <h1 class="m-0">GUEST ROOM</h1>
+                    <h1 class="m-0">SOFA</h1>
+                    <h1 class="border border-3 border-white p-2 d-inline-block">-20%</h1>
+                </div>
+            </a>
+            <div class="col-xl-6 col-md-12 row">
+                <a href="#" class="stocks-img2 no-underline col-12 d-flex justify-content-between">
+                    <img class="stocks-img-smole" src="img/stocks/2.png" alt="">
+                    <div class="align-self-center">
+                        <h3 class="stocks-h3 text-dark">OFFICE&nbsp;<span class="font-light">CHAIRE</span></h3>
+                        <p class="text-dark font-bold m-0">COLLECTION</p>
+                        <h1 class="stocks-h1 text-warning">&#36;200.00</h1>
+                    </div>
+                    <img class="stocks-img-smole" src="img/stocks/3.png" alt="">
+                </a>
+                <a href="#" class="stocks-img3 col mt-4 d-flex justify-content-between no-underline">
+                    <img class="stocks-img-smole" src="img/stocks/4.png" alt="">
+                    <div class="align-self-center text-center mr-xl-0 mr-md-4">
+                        <h4 class="stocks-h4 text-warning">SPECIAL&nbsp;<span class="font-light">COLLECTION</span></h4>
+                        <p class="text-dark font-bold">SAVE US 45% OF FURNITURE</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="furniture-filter mt-4" id="products">
+    <div class="container p-0">
+        <div class="row">
+            <section class="furniture col-12 col-md-9 mb-4 text-center">  <!--furniture section-->
+                <div class="d-flex justify-content-between btn">
+                    <h3 class="mb-2">FURNITURE</h3>
+                    <button type="button" data-toggle="modal" data-target="#filter" class="d-block d-md-none btn btn-white border border-muted">Filters by</button>
+                </div>
+                <hr class="hr-size">
+                <div class="row furniture-box m-0 mt-2" id="furnitureProduct">
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 furniture-card m-sm-0 text-center p-0 mb-sm-2 pr-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (1).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo1">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;30.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo1" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (1).png" alt=""></div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-inline-block bg-dark text-white p-2 pl-3 pr-3">&#36;30.00
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 furniture-card m-sm-0 text-center p-0 mb-sm-2 pr-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (2).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo2">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;15.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo2" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (2).png" alt=""></div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-inline-block bg-dark text-white p-2 pl-3 pr-3">&#36;15.00
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 d-none d-md-block furniture-card text-center m-sm-0 p-0 mb-sm-2 pr-2 mb-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (3).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo3">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="pt-2 pr-1 text-muted furniture-price">&#36;35.00</div>
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;25.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo3" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (3).png" alt=""></div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-flex">
+                                                <div class="pt-2 pr-1 text-muted furniture-price">&#36;35.00</div>
+                                                <div class="bg-dark text-white p-2 pl-3 pr-3k">&#36;25.00
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 furniture-card m-sm-0 text-center p-0 mb-sm-2 pr-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (4).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo4">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;15.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo4" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (4).png" alt=""></div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-inline-block bg-dark text-white p-2 pl-3 pr-3">&#36;15.00
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 d-none d-sm-block furniture-card text-center p-0 pr-2 mb-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (5).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo5">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;15.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo5" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (5).png" alt=""></div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-inline-block bg-dark text-white p-2 pl-3 pr-3">&#36;15.00
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 d-none d-md-block furniture-card text-center p-0 mb-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (6).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo6">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="pt-2 pr-1 text-muted furniture-price">&#36;35.00</div>
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;25.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo6" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (6).png" alt=""></div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-flex">
+                                                <div class="pt-2 pr-1 text-muted furniture-price">&#36;35.00</div>
+                                                <div class="bg-dark text-white p-2 pl-3 pr-3k">&#36;25.00
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 d-none d-md-block furniture-card text-center p-0 mb-2 pr-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (7).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo7">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;15.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo7" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (7).png" alt=""></div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-inline-block bg-dark text-white p-2 pl-3 pr-3">&#36;15.00
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 d-none d-md-block furniture-card text-center p-0 pr-2 mb-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (8).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo8">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;15.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo8" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (8).png" alt=""></div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-inline-block bg-dark text-white p-2 pl-3 pr-3">&#36;15.00
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-20 col-12 col-sm-6 col-lg-4 d-none d-lg-block furniture-card text-center m-sm-0 p-0 mb-sm-2 pr-2 mb-2">
+                        <div class="furniture-card-img position-relative">
+                            <img class="furniture-img" src="img/products/furniture/1 (9).png" alt="">
+                            <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">
+                                sale
+                            </div>
+                            <div class="d-flex position-absolute furniture-sale-item justify-content-between">
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"
+                                   data-toggle="modal" data-target="#modalInfo9">Quick
+                                    View</a>
+                                <a href="#" class="d-inlile-block bg-dark p-2 text-white furniture-sale-link"><i
+                                        class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                            </div>
+                        </div>
+                        <div class="border border-light text-center p-2">
+                            <h4 class="text-dark m-2 furniture-card-text">Aenean Ru Bristique</h4>
+                            <span class="mb-3"><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star" aria-hidden="true"></i><i
+                                    class="far fa-star" aria-hidden="true"></i><i class="far fa-star"
+                                                                                  aria-hidden="true"></i></span>
+                            <hr class="furniture-hr hr-size mb-3">
+                            <div class="d-flex m-0 justify-content-between">
+                                <div class="d-flex">
+                                    <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                            class="text-dark far fa-heart"></i></a>
+                                    <a class="d-inlile-block link border border-dark p-2"><i
+                                            class="text-dark fas fa-exchange-alt"></i></a>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="pt-2 pr-1 text-muted furniture-price">&#36;35.00</div>
+                                    <div class="bg-dark text-white p-2 pl-3 pr-3 furniture-card-link">&#36;25.00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="modalInfo9" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content modal-furniture">
+                                    <div class="modal-header">
+                                        <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                                aria-label="Close">
+                                            <span class="p-2" aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 m-2"><img class="furniture-img"
+                                                                              src="img/products/furniture/1 (9).png" alt="">
+                                        </div>
+                                        <div class="col-12 col-sm-7 m-2 text-left">
+                                            <h4>Aenean Ru Bristique</h4>
+                                            <p><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star"
+                                                                                               aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                         aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                   aria-hidden="true"></i><i class="far fa-star"
+                                                                                                                                                                             aria-hidden="true"></i>(0 reviews)
+                                            </p>
+                                            <hr>
+                                            <div class="d-flex">
+                                                <div class="pt-2 pr-1 text-muted furniture-price">&#36;35.00</div>
+                                                <div class="bg-dark text-white p-2 pl-3 pr-3k">&#36;25.00
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <div class="mb-2"><a href="#"
+                                                                 class="d-inlile-block bg-warning p-2 text-white furniture-sale-link"><i
+                                                    class="fas fa-shopping-basket"></i> ADD TO CART</a>
+                                                <a class="d-inlile-block link mr-2 border border-dark p-2"><i
+                                                        class="text-dark far fa-heart"></i></a>
+                                            </div>
+                                            <h5>Quick Overview</h5>
+                                            <p>Nam tristique porta ligula, vel viverra sem eleifend nec. Nulla sed
+                                                purus augue, eu euis mod tellus</p>
+                                            <hr>
+                                            <div class="row">
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Availability:</span> In Stock</p>
+                                                <p class="col-md-12 col-sm-6"><span class="font-weight-bold">Category:</span> Furniture</p>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-md-4"></div>
+                                        <div class="col-12 col-md-7 mb-4">
+                                            <hr>
+                                            <div class=" d-flex justify-content-center flex-wrap">
+                                                <a href="#"
+                                                   class="bg-primary text-white mr-1 p-1 border border-dark"><i
+                                                        class="text-white fab fa-facebook-f"></i>&nbsp;<span>Share</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-glide-g"></i>&nbsp;<span>Google+</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-primary fab fa-twitter"></i>&nbsp;<span>Tweet</span>
+                                                </a>
+                                                <a href="#" class="text-muted mr-1 p-1 border border-dark"><i
+                                                        class="text-danger fab fa-pinterest-p"></i>&nbsp;<span>Pinterest</span>
+                                                </a>
+                                                <a href="#" class="text-muted p-1 border border-dark"><i
+                                                        class="text-success fab fa-linkedin-in"></i>&nbsp;<span>Linkedin</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class=" mt-4 btn btn-light rounded-circle p-3" id="addProduct"><i
+                        class="text-dark fas fa-sync-alt"></i></button>
+            </section>
+            <section class="filters col-md-3" id="filter">        <!--filters section-->
+                <div class="modal fade" id="filter" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close bg-dark text-white" data-dismiss="modal"
+                                        aria-label="Close">
+                                    <span class="p-2" aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="px-20 row">
+                                <div class="col-10 m-2 m-sm-0 col-sm-5 mx-sm-4">
+                                    <h5 class="mb-2">FILTER BY CATEGORIES</h5>
+                                    <hr class="hr-size">
+                                    <div class="mb-4">
+                                        <ul class="list-group list-unstyled" id="filter-list-group">
+                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                                <div class="text-muted filter-item">&gt; Furniture</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">3</div>
+                                            </li>
+                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                                <div class="text-muted filter-item">&gt; Sofa</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">4</div>
+                                            </li>
+                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                                <div class="text-muted filter-item">&gt; Chair</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                                            </li>
+                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                                <div class="text-muted filter-item">&gt; Table</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                                            </li>
+                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                                <div class="text-muted filter-item">&gt; Bedroom</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-10 m-2 m-sm-0 col-sm-5">
+                                    <h5 class="mb-2">FILTER BY PRICE</h5>
+                                    <hr class="hr-size">
+                                    <form class="multi-range-field my-4 pb-4">
+                                        <input id="multi" class="multi-range" type="range" />
+                                    </form>
+                                </div>
+                                <div class="col-10 m-2 m-sm-0 col-sm-5 mx-sm-4">
+                                    <h5 class="mb-2">FILTER BY COLOR</h5>
+                                    <hr class="hr-size">
+                                    <ul class="list-unstyled">
+                                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-danger mr-2"></span>Red</label></li>
+                                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-dark mr-2"></span>Black</label></li>
+                                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-warning mr-2"></span>Yellow</label></li>
+                                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-primary mr-2"></span>Blue</label></li>
+                                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-pink mr-2"></span>Pink</label></li>
+                                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-success mr-2"></span>Green</label></li>
+                                    </ul>
+                                </div>
+                                <div class="col-10 m-2 m-sm-0 col-sm-5">
+                                    <h5 class="mb-2">FILTER BY SIZE</h5>
+                                    <hr class="hr-size">
+                                    <ul class="list-unstyled">
+                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>S</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">3</div></div></li>
+                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>M</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">4</div></div></li>
+                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>L</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
+                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>XL</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
+                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>XX</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-3"></div>
+                                <div class="col-10 m-2 m-sm-0 col-sm-6">
+                                    <h5 class="mb-2">FILTER BY TAGS</h5>
+                                    <hr class="hr-size">
+                                    <div class="mb-2">
+                                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Table</span></label>
+                                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Chair</span></label>
+                                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Hand Bad</span></label>
+                                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Women</span></label>
+                                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Fashion</span></label>
+                                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Clothes</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-md-block mt-2">
+                    <h5 class="mb-2">FILTER BY CATEGORIES</h5>
+                    <hr class="hr-size">
+                    <div class="mb-4">
+                        <ul class="list-group list-unstyled" id="filter-list-group">
+                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                <div class="text-muted filter-item">&gt; Furniture</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">3</div>
+                            </li>
+                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                <div class="text-muted filter-item">&gt; Sofa</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">4</div>
+                            </li>
+                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                <div class="text-muted filter-item">&gt; Chair</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                            </li>
+                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                <div class="text-muted filter-item">&gt; Table</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                            </li>
+                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                <div class="text-muted filter-item">&gt; Bedroom</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <h5 class="mb-2">FILTER BY PRICE</h5>
+                    <hr class="hr-size">
+                    <form class="multi-range-field my-4 pb-4">
+                        <input id="multi" class="multi-range" type="range" />
+                    </form>
+                    <h5 class="mb-2">FILTER BY COLOR</h5>
+                    <hr class="hr-size">
+                    <ul class="list-unstyled">
+                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-danger mr-2"></span>Red</label></li>
+                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-dark mr-2"></span>Black</label></li>
+                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-warning mr-2"></span>Yellow</label></li>
+                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-primary mr-2"></span>Blue</label></li>
+                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-pink mr-2"></span>Pink</label></li>
+                        <li><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox bg-success mr-2"></span>Green</label></li>
+                    </ul>
+                    <h5 class="mb-2">FILTER BY SIZE</h5>
+                    <hr class="hr-size">
+                    <ul class="list-unstyled">
+                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>S</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">3</div></div></li>
+                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>M</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">4</div></div></li>
+                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>L</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
+                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>XL</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
+                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>XX</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
+                    </ul>
+                    <h5 class="mb-2">FILTER BY TAGS</h5>
+                    <hr class="hr-size">
+                    <div class="">
+                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Table</span></label>
+                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Chair</span></label>
+                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Hand Bad</span></label>
+                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Women</span></label>
+                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Fashion</span></label>
+                        <label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox2 text-muted border border-text-muted px-2 py-1 mr-2"><i class="mr-1 fas fa-tags"></i>Clothes</span></label>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+
 <section id="furnitureGaleryCarousel" class="container d-flex justify-content-center my-2">
     <div class="carousel-width-const px-0">
         <h5 class="text-uppercase title-section">furniture gallery</h5>
@@ -1822,6 +2945,192 @@
         <img class="banner-bedroom-img ml-4 mt-4" src="img/step-project-online-shop_img_products_bedroom-bed-banner.png" />
     </div>
 </section>
+
+<section class="blog mt-4" id="blog">           <!--blog section-->
+    <div class="container">
+        <h2 class="blog-caption">LATEST BLOG</h2>
+        <div class="row mb-2">
+            <div class="position-relative blog-line bg-grey mt-2 col-9 col-sm-10 col-md-11"></div>
+            <div class="col-3 col-sm-2 col-md-1">
+                <div class="d-sm-none d-block">
+                    <a href="#carouselBlogControls" data-slide="prev" class="blog-angle border border-dark py-1 px-2 text-dark"><i class="fas fa-angle-left"></i></a>
+                    <a href="#carouselBlogControls" data-slide="next" class="blog-angle border border-dark py-1 px-2 text-dark"><i class="fas fa-angle-right"></i></a>
+                </div>
+                <div class="d-none d-sm-block">
+                    <a data-target="#carouselBlogControls" data-slide-to="0" class="active blog-rounder mr-1 px-2 bg-grey rounded-circle"></a>
+                    <a data-target="#carouselBlogControls" data-slide-to="1" class="blog-rounder mr-1 px-2 bg-grey rounded-circle"></a>
+                    <a data-target="#carouselBlogControls" data-slide-to="2" class="blog-rounder mr-1 px-2 bg-grey rounded-circle"></a>
+                    <a data-target="#carouselBlogControls" data-slide-to="3" class="d-md-none blog-rounder px-2 bg-grey rounded-circle"></a>
+                </div>
+            </div>
+        </div>
+        <div class="carousel slide px-20" id="carouselBlogControls" data-ride="carousel">
+            <div class="row carousel-item active font-none">
+                <div class="col-12 col-sm-6 col-md-4 d-inline-block font-normal blog-item pr-2">
+                    <img class="blog-img" src="img/blog/1.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+                <div class="pl-2 col-12 col-sm-6 col-md-4 d-none d-sm-inline-block font-normal blog-item">
+                    <img class="blog-img" src="img/blog/2.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+                <div class="pl-2 col-12 col-sm-6 col-md-4 d-none d-md-inline-block font-normal blog-item">
+                    <img class="blog-img" src="img/blog/3.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row carousel-item font-none">
+                <div class="col-12 col-sm-6 col-md-4 d-inline-block font-normal blog-item pr-2">
+                    <img class="blog-img" src="img/blog/3.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+                <div class="pl-2 col-12 col-sm-6 col-md-4 d-none d-sm-inline-block font-normal blog-item">
+                    <img class="blog-img" src="img/blog/2.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+                <div class="pl-2 col-12 col-sm-6 col-md-4 d-none d-md-inline-block font-normal blog-item">
+                    <img class="blog-img" src="img/blog/1.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row carousel-item font-none">
+                <div class="col-12 col-sm-6 col-md-4 d-inline-block font-normal blog-item pr-2">
+                    <img class="blog-img" src="img/blog/2.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+                <div class="pl-2 col-12 col-sm-6 col-md-4 d-none d-sm-inline-block font-normal blog-item">
+                    <img class="blog-img" src="img/blog/3.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+                <div class="pl-2 col-12 col-sm-6 col-md-4 d-none d-md-inline-block font-normal blog-item">
+                    <img class="blog-img" src="img/blog/1.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row carousel-item font-none d-md-none" id="carouselElem">
+                <div class="col-12 col-sm-6 d-inline-block font-normal blog-item">
+                    <img class="blog-img" src="img/blog/1.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+                <div class="pl-2 col-12 col-sm-6 d-none d-sm-inline-block font-normal blog-item">
+                    <img class="blog-img" src="img/blog/2.jpg" alt="blog">
+                    <div class="text-center mx-4 position-relative bg-white blog-item-info">
+                        <div class="d-flex py-2 py-md-4">
+                            <div class="text-muted blog-text14 mx-1 mx-md-3"><i class="mx-1 mx-md-2 fas fa-calendar-alt"></i>15 jan 2016</div>
+                            <div class="text-muted blog-text14 ml-1 ml-md-3"><i class="mx-1 mx-md-2 text-dark fas fa-comments"></i>4 Comments</div>
+                        </div>
+                        <div class="my-2 text-dark blog-caption text-left">Products That Fight Static</div>
+                        <div class="text-muted mb-4 blog-text14 text-left">Aliquam dictum pellentesque nibh sit amet dapibus. Vivamus eget luctus nisi.
+                            Nullam euismod leo vehicula, rutrum magna in, ornare enim vehicula, rutrum magna in, ornare enim.
+                        </div>
+                        <button class="btn btn-dark border-0 px-4 py-2 mb-4 blog-btn" type="button">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="newslettersSection" class="newsletters-bg ">
     <div class="container py-4 px-0 d-flex justify-content-center flex-nowrap align-items-center">
     <h4 class="title-section pr-1  pr-sm-3 mb-0 fs-22 newsletters-title">NEWSLETTER:</h4>
@@ -1894,6 +3203,10 @@
     <div class="copyright-bg-bottom"></div>
 </section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<script src="js/addProduct.js"></script>
 <script src="js/CarouselAndModal.js"></script>
 </body>
 </html>
