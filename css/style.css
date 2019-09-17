@@ -609,12 +609,21 @@
 .filter-list:hover .filter-item {
     color: #d58e32 !important;
 }
+
 .filter-list:hover .filter-count {
     background-color: #d58e32 !important
 }
 
-.filter-list:target .filter-item {
+.checkbox3 {
+    cursor: pointer;
+}
+
+[type=checkbox]:checked + .checkbox3 > .filter-item {
     color: #d58e32 !important;
+}
+
+[type=checkbox]:checked + .checkbox3 > .filter-count {
+    background-color: #d58e32 !important;
 }
 
 .bg-pink {
@@ -628,9 +637,10 @@
     position: relative;
     border-radius:2px;
     padding:3px;
+    cursor: pointer;
 }
 
-[type=checkbox]:checked + .span-checkbox:before {
+.span-checkbox:hover::before {
     color: #ffffff;
     content: '\2713';
     position: absolute;
@@ -639,34 +649,78 @@
     font-size: 15px;
 }
 
-.span-checkbox1 {
-    height: 14px;
-    width: 14px;
-    display: inline-block;
-    position: relative;
-    border: 1px solid black;
-    border-radius:2px;
-    padding:3px;
-}
-
-[type=checkbox]:checked + .span-checkbox1:before {
+[type=checkbox]:checked + .span-checkbox::before {
     color: #ffffff;
     content: '\2713';
     position: absolute;
-    top: -5px;
+    top: -4px;
     left: 1;
     font-size: 15px;
 }
 
-[type=checkbox]:checked + .span-checkbox1 {
+.checkbox1 {
+    cursor: pointer;
+}
+
+.checkbox1:before {
+    content: "";
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    border: 1px solid black !important;
+    border-radius:2px;
+    padding:3px;
+}
+
+.checkbox1:hover::before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    border: 0 !important;
     background-color: orange;
-    border: 0;
+}
+
+.checkbox1:hover::after {
+    color: #ffffff;
+    content: '\2713';
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    font-size: 15px;
+}
+
+[type=checkbox]:checked + .checkbox1:before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    border: 0 !important;
+    background-color: orange;
+}
+
+[type=checkbox]:checked + .checkbox1::after {
+    color: #ffffff;
+    content: '\2713';
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    font-size: 15px;
+}
+
+[type=checkbox]:checked + .checkbox1 > .filter-item {
+    color: #d58e32 !important;
+}
+
+[type=checkbox]:checked + .checkbox1 > .filter-count {
+    background-color: #d58e32 !important;
 }
 
 .span-checkbox2 {
     display: inline-block;
     border-radius:2px;
     padding:3px;
+    cursor: pointer;
 }
 
 .span-checkbox2:hover {
