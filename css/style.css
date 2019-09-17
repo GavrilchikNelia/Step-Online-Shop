@@ -825,6 +825,11 @@
 }
 
 @media screen and (max-width: 400px) {
+
+    .stocks-h4, .stocks-h3 {
+        font-size: 15px;
+    }
+
     .blog-img {
         width: 250px;
         height: 190px;
