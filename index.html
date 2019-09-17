@@ -112,7 +112,7 @@
             <section class="furniture col-12 col-md-9 mb-4 text-center">  <!--furniture section-->
                 <div class="d-flex justify-content-between btn">
                     <h3 class="mb-2">FURNITURE</h3>
-                    <button type="button" data-toggle="modal" data-target="#filter" class="d-block d-md-none btn btn-white border border-muted">Filters by</button>
+                    <button type="button" data-toggle="modal" data-target="#filterModal" class="d-block d-md-none btn btn-white border border-muted">Filters by</button>
                 </div>
                 <hr class="hr-size">
                 <div class="row furniture-box m-0 mt-2" id="furnitureProduct">
@@ -1042,8 +1042,8 @@
                 <button type="button" class=" mt-4 btn btn-light rounded-circle p-3" id="addProduct"><i
                         class="text-dark fas fa-sync-alt"></i></button>
             </section>
-            <section class="filters col-md-3" id="filter">        <!--filters section-->
-                <div class="modal fade" id="filter" tabindex="-1" role="dialog"
+            <section class="filters col-md-3" id="filter">                                  <!--filters section-->
+                <div class="modal fade" id="filterModal" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
@@ -1058,28 +1058,36 @@
                                     <h5 class="mb-2">FILTER BY CATEGORIES</h5>
                                     <hr class="hr-size">
                                     <div class="mb-4">
-                                        <ul class="list-group list-unstyled" id="filter-list-group">
-                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                                 <div class="text-muted filter-item">&gt; Furniture</div>
                                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">3</div>
-                                            </li>
-                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                            </div>
+                                        </label>
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                                 <div class="text-muted filter-item">&gt; Sofa</div>
                                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">4</div>
-                                            </li>
-                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                            </div>
+                                        </label>
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                                 <div class="text-muted filter-item">&gt; Chair</div>
                                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
-                                            </li>
-                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                            </div>
+                                        </label>
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                                 <div class="text-muted filter-item">&gt; Table</div>
                                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
-                                            </li>
-                                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                                            </div>
+                                        </label>
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                                 <div class="text-muted filter-item">&gt; Bedroom</div>
                                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
-                                            </li>
-                                        </ul>
+                                            </div>
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="col-10 m-2 m-sm-0 col-sm-5">
@@ -1104,13 +1112,38 @@
                                 <div class="col-10 m-2 m-sm-0 col-sm-5">
                                     <h5 class="mb-2">FILTER BY SIZE</h5>
                                     <hr class="hr-size">
-                                    <ul class="list-unstyled">
-                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>S</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">3</div></div></li>
-                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>M</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">4</div></div></li>
-                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>L</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
-                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>XL</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
-                                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>XX</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
-                                    </ul>
+                                    <div class="">
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                                <div class="pl-3 filter-item">S</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">3</div>
+                                            </div>
+                                        </label>
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                                <div class="pl-3 filter-item">M</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">4</div>
+                                            </div>
+                                        </label>
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                                <div class="pl-3 filter-item">L</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                                            </div>
+                                        </label>
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                                <div class="pl-3 filter-item">XL</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                                            </div>
+                                        </label>
+                                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                                <div class="pl-3 filter-item">XX</div>
+                                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                                            </div>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="col-sm-3"></div>
                                 <div class="col-10 m-2 m-sm-0 col-sm-6">
@@ -1133,28 +1166,36 @@
                     <h5 class="mb-2">FILTER BY CATEGORIES</h5>
                     <hr class="hr-size">
                     <div class="mb-4">
-                        <ul class="list-group list-unstyled" id="filter-list-group">
-                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                 <div class="text-muted filter-item">&gt; Furniture</div>
                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">3</div>
-                            </li>
-                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                            </div>
+                        </label>
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                 <div class="text-muted filter-item">&gt; Sofa</div>
                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">4</div>
-                            </li>
-                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                            </div>
+                        </label>
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                 <div class="text-muted filter-item">&gt; Chair</div>
                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
-                            </li>
-                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                            </div>
+                        </label>
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                 <div class="text-muted filter-item">&gt; Table</div>
                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
-                            </li>
-                            <li data-toggle="list" class="list-group-item border-0 d-flex justify-content-between filter-list p-2">
+                            </div>
+                        </label>
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox3 border-0 d-flex justify-content-between filter-list p-1">
                                 <div class="text-muted filter-item">&gt; Bedroom</div>
                                 <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
-                            </li>
-                        </ul>
+                            </div>
+                        </label>
                     </div>
                     <h5 class="mb-2">FILTER BY PRICE</h5>
                     <hr class="hr-size">
@@ -1173,13 +1214,38 @@
                     </ul>
                     <h5 class="mb-2">FILTER BY SIZE</h5>
                     <hr class="hr-size">
-                    <ul class="list-unstyled">
-                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>S</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">3</div></div></li>
-                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>M</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">4</div></div></li>
-                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>L</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
-                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>XL</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
-                        <li class="py-2"><div class="d-flex justify-content-between filter-size"><label class="text-dark"><input type='checkbox' class="d-none"><span class="span-checkbox1 mr-2"></span>XX</label><div class="text-white bg-dark rounded-circle px-2 pt-1 filter-count1">5</div></div></li>
-                    </ul>
+                    <div class="">
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                <div class="pl-3 filter-item">S</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">3</div>
+                            </div>
+                        </label>
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                <div class="pl-3 filter-item">M</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">4</div>
+                            </div>
+                        </label>
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                <div class="pl-3 filter-item">L</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                            </div>
+                        </label>
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                <div class="pl-3 filter-item">XL</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                            </div>
+                        </label>
+                        <label class="d-block text-dark"><input type='checkbox' class="d-none">
+                            <div class="checkbox1 position-relative border-0 d-flex justify-content-between filter-list p-1">
+                                <div class="pl-3 filter-item">XX</div>
+                                <div class="text-white bg-dark rounded-circle px-2 filter-count">5</div>
+                            </div>
+                        </label>
+                    </div>
                     <h5 class="mb-2">FILTER BY TAGS</h5>
                     <hr class="hr-size">
                     <div class="">
