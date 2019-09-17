@@ -274,16 +274,20 @@ $('#myCarouselTab4 .carousel-item-imgs').on('click', function() {
 });
 
 
-    if ($(window).width() >= 480) {
-        $('#newsletter').attr('size', '48');
-    }
-    if ($(window).width() >= 481) {
-        $('#newsletter').attr('size', '26');
-        $('#newsletter').attr('placeholder', '           Enter your email address');
-    }
-    if ($(window).width() >= 575) {
-        $('#newsletter').attr('size', '30');
-    }
-    if ($(window).width() >= 768) {
-        $('#newsletter').attr('size', '62');
-    }
+if ($(window).width() >= 480) {
+    $('#newsletter').attr('size', '48');
+}
+if ($(window).width() >= 481) {
+    $('#newsletter').attr('size', '26');
+    $('#newsletter').attr('placeholder', '           Enter your email address');
+}
+if ($(window).width() >= 575) {
+    $('#newsletter').attr('size', '30');
+}
+if ($(window).width() >= 768) {
+    $('#newsletter').attr('size', '62');
+}
+
+// $('.slider-main-img-icon').onmouseover( function () {
+//
+// });
