@@ -73,6 +73,253 @@
     </div>
 </section>
 
+<section class="header">
+    <div class="container">
+        <div class="d-flex flex-row justify-content-between pt-5 pb-5">
+            <a href="tel:23003560222" class="phone text-secondary mt-3 ">2300 - 3560 - 222</a>
+            <img class="logo" src="img/bazar-Online.png">
+            <div class="basket  text-white rounded" data-toggle="modal" data-target="#myModal"><span><i
+                    class="basketIcon fas fa-shopping-basket"></i></span><span
+                    class="quantityOfProd rounded-circle bg-dark">0</span></div>
+        </div>
+    </div>
+
+
+
+
+    <!-- The Modal -->
+    <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content ">
+
+                <!-- Modal Header -->
+                <div class="modal-header border-0">
+                    <button type="button" class="close bg-dark p-1 text-white" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body text-center p-5 text-secondary">
+                    <h1 class="font-weight-bold px-4">Your cart
+                        is empty</h1>
+
+                    <h3 class="font-weight-light">But it's never too
+                        late to fix it :)</h3>
+                </div>
+
+
+
+                <div class="modal-body  productsInBasket mx-col-1 d-none" id="productsInBasket">
+                    <div class="row ">
+                        <img class="img-responsive col-6 col-md-4 imgInBasket" src="http://placehold.it/120x80" alt="prewiew">
+                        <div class="col-6 col-sm-4 col-md-6 text-sm-center ">
+                            <div class="prodName"> <h4 class="product-name text-left"><strong>Sunbaby Magic <span class="bearChair">Bear</span>  Chair</strong></h4></div>
+                            <div class="flex-xl-row justify-content-xl-between my-xl-auto">
+                                <div class=" text-left mx-auto d-md-flex my-xl-auto"> <p class="oldPrice font-weight-light"><del>$350.00</del></p><h5 class="newPrice bg-dark p-1 text-white ml-md-2">$250.00</h5></div>
+                            </div>
+                            <div class="col-12 col-sm-12 col-md-8 text-sm-center  d-flex justify-content-between ml-md-auto">
+                                <div class="qty d-flex flex-column  col-sm-6 col-md-4 ml-0 p-0 flex-lg-row my-lg-auto">
+                                    <p class="quantityTxt  font-weight-bold col-6 m-0 pt-2">Quantity:</p>
+                                    <div class="d-flex col-6 ">
+                                        <input type="number" class="count border" name="qty" value="1" id="count">
+                                        <span class="minus border mx-1" id="minus">-</span>
+                                        <span class="plus border mx-1" id="plus">+</span>
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-sm-4 col-md-4 text-md-right ml-md-5">
+                                    <p class="sumTxt font-weight-light text-center pt-2">Sum</p>
+                                    <h5 class="font-weight-bold text-center" id="sumPrice">$250.00</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer border-0 d-flex flex-column ">
+                    <div class="d-none">
+                        <div class="pull-right col-12 text-right mr-4">
+                            Total : $1000
+                        </div>
+
+                        <div class=" w-100 d-flex justify-content-between">
+                            <button class="modalFooterBtn cont p-2  text-white ml-4 mt-3">&gt; CONTINUE</button>
+
+                            <button class="modalFooterBtn buyNow p-2  text-white mr-4 mt-3"><i class="fas fa-shopping-basket"></i> BUY NOW</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="topMenu ">
+    <div class="container">
+
+        <nav class=" navbar navbar-expand-lg navbar-light bg-white   menu justify-content-between">
+            <form class="form-inline my-2 my-md-0 ">
+                <input class="my-3 form-control" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn bg-white" type="button">
+                    <i class="text-muted fas fa-search"></i>
+                </button>
+            </form>
+            <div class="collapse navbar-collapse mx-auto " id="navbarsExample09">
+                <ul class="navbar-nav ml-auto mb-0 ">
+                    <li class="py-3 nav-item listName">
+                        <a class="nav-link listNameLink" href="#">HOME</a>
+                    </li>
+                    <li class="py-3 nav-item listName">
+                        <a class="nav-link listNameLink" href="#topSlider">SLIDER</a>
+                    </li>
+                    <li class="py-3 nav-item listName">
+                        <a class="nav-link listNameLink" href="#featuresSection">FEATURES</a>
+                    </li>
+                    <li class="py-3 nav-item listName">
+                        <a class="nav-link listNameLink" href="#stocks">STOCKS</a>
+                    </li>
+                    <li class="py-3 nav-item listName">
+                        <a class="nav-link listNameLink" href="#products">PRODUCTS</a>
+                    </li>
+                    <li class="py-3 nav-item listName">
+                        <a class="nav-link listNameLink" href="#furnitureGaleryCarousel">GALLERY</a>
+                    </li>
+                    <li class="py-3 nav-item listName">
+                        <a class="nav-link listNameLink" href="#blog">BLOG</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="dropMenu">
+
+                <div class="dropdown">
+                    <span class="navbar-toggler-icon" id="showbutton"></span>
+                    <div class="dropdown-menu dropdown-menu-right border-0" id="showing">
+                        <a class="dropdown-item text-right text-white crossBut" id="crossBut" href="#"><i
+                                class="fas fa-times "></i></a>
+                        <a class="dropdown-item text-right p-3 " href="#">HOME</a>
+                        <a class="dropdown-item text-right p-3 " href="#topSlider">SLIDER</a>
+                        <a class="dropdown-item text-right p-3 " href="#featuresSection">FEATURES</a>
+                        <a class="dropdown-item text-right p-3 " href="#stocks">STOCKS</a>
+                        <a class="dropdown-item text-right p-3 " href="#products">PRODUCTS</a>
+                        <a class="dropdown-item text-right p-3 " href="#furnitureGaleryCarousel">GALLERY</a>
+                        <a class="dropdown-item text-right p-3 " href="#blog">BLOG</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</section>
+
+<section class="topSlider" id="topSlider">
+    <div class="container">
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="slideImg  w-100" src="img/step-project-online-shop_img_top-slider_1.jpg"
+                         alt="First slide">
+                    <div class="carousel-caption backgroundForCarousel">
+                        <h1 class="indoorTxt">INDOOR FURNITURE</h1>
+                        <h5 class="saveUpTxt">SAVE UP TO 50% OF ALL FURNITURE</h5>
+                        <button id="shopNow"
+                                class="bg-white col-md-px-1 col-md-py-1 col-md-mb-1 px-3 py-2 position-relative">
+                            SHOP
+                            NOW
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="slideImg  w-100" src="img/step-project-online-shop_img_top-slider_2.jpg"
+                         alt="Second slide">
+                    <div class="carousel-caption backgroundForCarousel">
+                        <h1 class="indoorTxt">INDOOR FURNITURE</h1>
+                        <h5 class="saveUpTxt">SAVE UP TO 50% OF ALL FURNITURE</h5>
+                        <button id="shopNow" style="top: 40px" class="bg-white px-3 py-2 position-relative">SHOP
+                            NOW
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="arrowsGroup text-center d-flex flex-row justify-content-center">
+            <a class="carousel-control arrow p-1" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control arrow p-1" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="ourFeatures">
+    <div class="container">
+
+        <div class="featuresCont d-flex flex-wrap justify-content-around">
+
+            <div class="features border " id="features">
+                <div class="featuresIconFirst border rounded-circle position-relative bg-white m-auto">
+                    <div class="featuresIconSecond border rounded-circle bg-white mx-auto">
+                        <i class="featuresSmallIcon fas fa-truck"></i>
+                    </div>
+                </div>
+                <div class="iconContent">
+                    <p class=" m-0 font-weight-bold">FREE SHIPPING</p>
+                    <p class="iconTxt">ALL ORDER</p>
+                </div>
+            </div>
+
+
+            <div class="features border " id="featuresSection">
+                <div class="featuresIconFirst border rounded-circle position-relative bg-white m-auto">
+                    <div class="featuresIconSecond border rounded-circle bg-white mx-auto" id="featuresIconSecond">
+                        <i class="featuresSmallIcon fas fa-headphones"></i>
+                    </div>
+                </div>
+                <div class="iconContent">
+                    <p class="font-weight-bold m-0">24/7 CUSTOMER</p>
+                    <p class="iconTxt">SUPPORT</p>
+                </div>
+            </div>
+
+            <div class="features border " id="features">
+                <div class="featuresIconFirst border rounded-circle position-relative bg-white m-auto">
+                    <div class="featuresIconSecond border rounded-circle bg-white mx-auto">
+                        <i class="featuresSmallIcon fas fa-undo"></i>
+                    </div>
+                </div>
+                <div class="iconContent">
+                    <p class="font-weight-bold m-0">MONEY BACK</p>
+                    <p class="iconTxt">GUARANTEE</p>
+                </div>
+            </div>
+
+            <div class="features border " id="features">
+                <div class="featuresIconFirst border rounded-circle position-relative bg-white m-auto">
+                    <div class="featuresIconSecond border rounded-circle bg-white mx-auto">
+                        <i class="featuresSmallIcon fas fa-bullhorn"></i>
+                    </div>
+                </div>
+                <div class="iconContent">
+                    <p class="font-weight-bold m-0">MEMBER DISCOUNT</p>
+                    <p class="iconTxt">FIRST ORDER</p>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
 <section class="stocks my-4" id="stocks">      <!--Stocks section-->
     <div class="container">
         <div class="row">
@@ -3277,10 +3524,12 @@
     <div class="copyright-bg-bottom"></div>
 </section>
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 <script src="js/addProduct.js"></script>
 <script src="js/CarouselAndModal.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

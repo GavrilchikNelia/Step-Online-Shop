@@ -337,6 +337,343 @@
     background-color: #c2c2c2;
     min-height: 11px;
 }
+
+/*header*/
+.header {
+    background-color: #363636;
+    border: none;
+}
+.dropMenu {
+    display: none;
+}
+
+.phone {
+    cursor: pointer;
+    z-index: 1000
+}
+
+.phone:hover {
+    text-decoration: underline
+}
+
+.basket {
+    background: #D58E32;
+    padding: 20px 15px;
+    cursor: pointer;
+}
+
+.basketIcon {
+    position: relative;
+    left: 15px
+}
+
+.quantityOfProd {
+    padding: 10px;
+    position: relative;
+    left: 30px
+}
+
+/*Modal basket*/
+
+
+
+.product-name {
+    font-size: 14px;
+}
+
+.quantity {
+    /*float: left;*/
+    margin-right: 15px;
+    background-color: #eee;
+    position: relative;
+    width: 80px;
+    overflow: hidden
+}
+
+.quantity input {
+    margin: 0;
+    text-align: center;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    float: right;
+    color: #000;
+    font-size: 20px;
+    border: 0;
+    outline: 0;
+    background-color: #F6F6F6
+}
+
+.quantity input.qty {
+    position: relative;
+    border: 0;
+    width: 100%;
+    height: 40px;
+    padding: 10px 25px 10px 10px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 0;
+    background-clip: padding-box
+}
+
+.quantity .minus, .quantity .plus {
+    line-height: 0;
+    background-clip: padding-box;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    -webkit-background-size: 6px 30px;
+    -moz-background-size: 6px 30px;
+    color: #bbb;
+    font-size: 20px;
+    position: absolute;
+    height: 50%;
+    border: 0;
+    right: 0;
+    padding: 0;
+    width: 25px;
+    z-index: 3
+}
+
+.quantity .minus:hover, .quantity .plus:hover {
+    background-color: #dad8da
+}
+
+.quantity .minus {
+    bottom: 0
+}
+.shopping-cart {
+    margin-top: 20px;
+}
+
+body.modal-open #wrap{
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+
+.modal-backdrop {background: #f7f7f7;}
+
+.close {
+    font-size: 50px;
+    display:block;
+}
+
+.productsInBasket {
+    border: 1px solid grey;
+    border-radius: 5px;
+    margin: 10px !important;
+}
+
+.quantityTxt {
+    font-size: 12px;
+}
+.qty .count {
+    font-size: 14pt;
+    text-align: center;
+    width: 50px;
+    padding-left: 12px;
+}
+.qty .plus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 2px 10px;
+}
+.qty .minus {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    padding: 2px 10px;
+}
+.minus:hover{
+    border-color: #D58E32 !important;
+    color: #D58E32 !important;
+}
+.plus:hover{
+    border-color: #D58E32 !important;
+    color: #D58E32 !important;
+}
+.modalFooterBtn {
+    font-size: 12px !important;
+    background-color: #939393 !important;
+}
+
+.modalFooterBtn:hover {
+    background-color: #D58E32 !important;
+    border: none !important;
+}
+
+
+.modal {
+    padding: 50px !important;
+}
+
+.fa-times:before {
+    font-size: 30px;
+}
+
+
+/*topMenu*/
+.topMenu {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5)
+}
+
+#custom-search-input button {
+    position: relative;
+    left: -35px;
+}
+
+.search-query:focus + button {
+    z-index: 3;
+}
+
+
+.listName {
+    list-style: none;
+    display: inline-block;
+    padding: 22px 5px;
+    font-size: 10pt;
+    border-top: 4px solid white;
+}
+
+.listName:hover {
+    background: #d58e32 !important;
+    border-top: black 3px solid !important;
+}
+
+.listName:hover .listNameLink {
+    text-decoration: none;
+    color: white !important;
+}
+
+.listNameLink {
+    color: black;
+    text-decoration: none;
+}
+
+.toggle {
+    padding: 0 10px;
+    text-align: right;
+    display: none;
+    font-size: 20px;
+    top: 5px;
+    position: relative
+}
+
+.cross {
+    padding: 0 10px;
+    text-align: right;
+    display: none;
+    color: #b8b8b8;
+    background-color: #363636
+}
+
+.menu {
+    padding: 0 !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+
+.btn {
+    position: relative;
+    right: 40px;
+    border: 1px solid lightgrey !important;
+    border-left: none !important;
+    border-radius: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+/*topSlider*/
+.arrow {
+    background-color: #363636;
+    width: 100%;
+}
+
+.arrow:hover {
+    background: #D58E32
+}
+
+.backgroundForCarousel {
+    background-color: rgba(0, 0, 0, 0.5);
+    left: 0;
+    right: 0;
+    bottom: 100px
+}
+
+.slideImg {
+    height: 500px;
+}
+
+/*features*/
+.features {
+    display: inline-block;
+    margin-top: 70px;
+    width: 260px;
+    height: 120px;
+    text-align: center;
+}
+
+.featuresCont {
+    text-align: center;
+
+}
+
+.features:hover .featuresIconSecond {
+    background-color: #d58e32 !important;
+}
+
+.features:hover .featuresSmallIcon {
+    color: white !important;
+}
+
+.features:hover .featuresIconFirst {
+    border-color: #d58e32 !important;
+}
+
+.features:hover .iconContent {
+    color: #e0a38e
+}
+
+.iconContent {
+    position: relative;
+    bottom: 25px
+}
+
+.iconTxt {
+    font-weight: lighter
+}
+
+.featuresSmallIcon {
+    margin-top: 24px
+}
+
+.featuresIconFirst {
+    bottom: 40px;
+    width: 76px;
+    height: 76px;
+    text-align: center;
+}
+
+.featuresIconSecond {
+    margin-top: 6px;
+    width: 62px;
+    height: 62px;
+    text-align: center;
+}
+
+
+
 @media screen and (min-width: 320px) {
     .nav-tabs .nav-link {
         padding-right: 0;
@@ -814,12 +1151,42 @@
         width: 300px;
         height: 230px;
     }
+
+
+}
+@media screen and (max-width: 991px) {
+    .dropMenu {
+        display: block !important;
+    }
 }
 
 @media screen and (max-width: 992px) {
     .blog-img {
         width: 250px;
         height: 180px;
+    }
+
+    .listName {
+        font-size: 10px
+    }
+
+    .slideImg {
+        height: 400px
+    }
+
+    .dropdown-menu {
+        background-color: #363636 !important;
+        top: -70px !important;
+    }
+
+    .dropdown-item {
+        color: #b8b8b8 !important;
+    }
+
+    .dropdown-item:hover {
+        color: white !important;
+        border-bottom: 1px solid #b8b8b8 !important;
+        background-color: #363636 !important;
     }
 }
 
@@ -858,6 +1225,11 @@
     .blog-img {
         width: 360px;
         height: 290px;
+    }
+    .form-inline .form-control {
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
     }
 }
 
