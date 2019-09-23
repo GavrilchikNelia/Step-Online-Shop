@@ -45,4 +45,27 @@ $(document).ready(function () {
     })
 
 
+
+        // $('#plus').on('click',function(){
+        //     $('#count').val(parseInt($('#count').val()) + 1 );
+        // });
+        // $('#minus').on('click',function(){
+        //     $('#count').val(parseInt($('#count').val()) - 1 );
+        //     if ($('#count').val() == 0) {
+        //         $('#productsInBasket').remove();
+        //     }
+        // });
+  $('#plus').click(function(){
+            $('#count').val(parseInt($('#count').val()) + 1 );
+        });
+        $('#minus').on('click',function(){
+            $('#count').val(parseInt($('#count').val()) - 1 );
+            if ($('#count').val() == 0) {
+                $('#productsInBasket').remove();
+            }
+        });
+
+
+
+
 });
