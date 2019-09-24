@@ -582,7 +582,7 @@ body.modal-open #wrap{
     border-radius: 0 !important;
 }
 
-.btn {
+.btnSearch {
     position: relative;
     right: 40px;
     border: 1px solid lightgrey !important;
