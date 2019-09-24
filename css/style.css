@@ -302,11 +302,11 @@
 }
 .letter-btn {
     padding: 7px 14px;
-    background-color: white;
-    border: 1px solid transparent;
+    background-color: white !important;
+    border: 1px solid transparent !important;
     margin-top: -4px;
     margin-left: 14px;
-    color: rgba(213, 142, 50, 255);
+    color: rgba(213, 142, 50, 255) !important;
 }
 .fs-22 {
     font-size: 22px;
