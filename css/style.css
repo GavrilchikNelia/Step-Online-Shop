@@ -12,6 +12,9 @@
 .font-085rem{
     font-size: 0.84rem;
 }
+/*#modalRegister, #modalLogIn {*/
+/*    overflow-y: hidden;*/
+/*}*/
 .navbar-li-position-1 {
     padding-right: 1rem;
 }
