@@ -12,10 +12,6 @@ $(document).ready(function () {
         countProduct = 3;
     }
 
-    // const arrImg = ["img/products/furniture/1 (1).png", "img/products/furniture/1 (2).png", "img/products/furniture/1 (1).png",
-    // "img/products/furniture/1 (1).png", "img/products/furniture/1 (1).png", "img/products/furniture/1 (1).png",
-    // "img/products/furniture/1 (1).png", "img/products/furniture/1 (1).png", "img/products/furniture/1 (1).png"];
-
     const arrImgAdd = ["img/products/furniture/10.png", "img/products/furniture/11.png", "img/products/furniture/12.png",
         "img/products/furniture/13.png", "img/products/furniture/14.png", "img/products/furniture/15.png",
         "img/products/furniture/16.png", "img/products/furniture/17.png", "img/products/furniture/18.png",
@@ -47,7 +43,7 @@ $(document).ready(function () {
                     <hr>
                     <div class="d-flex">
                         <div class="pt-2 pr-1 text-muted furniture-price">&#36;160.00</div>
-                        <div class="bg-dark text-white p-2 pl-3 pr-3k">&#36;120.00</div>
+                        <div class="bg-dark text-white py-2 px-3">&#36;120.00</div>
                     </div>
                     <hr>
                     <div class="mb-2"><a href="#"
@@ -90,7 +86,7 @@ $(document).ready(function () {
     $("#addProduct").on("click", function () {
         $("#addProduct").remove();
         for (let i = 0; i < countProduct; i++) {
-            $("#furnitureProduct").append(`<div class="px-20 col-12 col-sm-6 col-lg-4 furniture-card m-sm-0 text-center p-0 mb-sm-2 pr-2">
+            $("#furnitureProduct").append(`<div class="px-20 col-12 col-sm-6 col-lg-4 furniture-card m-sm-0 text-center p-ms-0 mb-sm-2 pr-sm-2">
         <div class="furniture-card-img position-relative">
         <img class="furniture-img" src="${arrImgAdd[i]}" alt="">
         <div class="d-none position-absolute furniture-sale bg-dark text-white pl-3 pr-3 pb-2">

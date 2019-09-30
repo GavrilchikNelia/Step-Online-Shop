@@ -842,7 +842,7 @@ button:focus {
     border-width:3px !important;
 }
 
-.pTop {
+.pTop-180 {
     padding-top: 180px !important;
 }
 
@@ -899,6 +899,10 @@ button:focus {
     background-color: #f4f5f7;
 }
 
+.furniture-card-text {
+    font-size: 17px
+}
+
 .furniture-card:hover .furniture-card-text {
     color: #d58e32 !important;
     transition-duration: 0.4s;
@@ -930,6 +934,7 @@ button:focus {
 
 .furniture-sale-link {
     cursor: pointer;
+    font-size: 13px;
 }
 
 .furniture-card:hover .furniture-sale-item {
@@ -955,7 +960,7 @@ button:focus {
 }
 
 #blog {
-    min-height: 600px;
+    min-height: 650px;
 }
 
 .checkbox3 {
@@ -1082,8 +1087,10 @@ button:focus {
 }
 
 .modal-furniture {
-    right: 200px;
-    min-width: 800px !important;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+    min-width: 1000px !important;
 }
 
 .blog-line {
@@ -1153,14 +1160,46 @@ button:focus {
     height: 290px;
 }
 
+.furniture-caption {
+    font-size: 22px;
+}
+
+.filter-caption {
+    font-size: 16px;
+}
+
+.px-20 {
+    padding: 0 0;
+}
+
+.filter-burger {
+    width: 18px;
+    height: 3px;
+    background-color: #343434;
+    margin: 0 2px 2px 0;
+}
+
+.filter-burger:last-child {
+    margin-bottom: 0;
+}
+
+.filter-btn {
+    display: inline-block;
+}
+
 @media screen and (max-width: 1100px) {
     .blog-img {
         width: 300px;
         height: 230px;
     }
-
-
 }
+
+@media screen and (max-width: 1050px) {
+    .modal-furniture {
+         min-width: 750px !important;
+    }
+}
+
 @media screen and (max-width: 991px) {
     .dropMenu {
         display: block !important;
@@ -1197,23 +1236,19 @@ button:focus {
     }
 }
 
+@media screen and (max-width: 800px) {
+    .modal-furniture {
+        min-width: 600px !important;
+    }
+}
+
 @media screen and (max-width: 650px) {
     .blog-img {
         width: 230px;
         height: 170px;
     }
-}
 
-@media screen and (max-width: 900px) {
     .modal-furniture {
-        right: 0;
-        min-width: 550px !important;
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .modal-furniture {
-        right: 0;
         min-width: 400px !important;
     }
 }
@@ -1225,6 +1260,10 @@ button:focus {
 
     .stocks-img-smole {
         height: 140px;
+    }
+
+    .blog-item-info {
+        width: 80%;
     }
 }
 
