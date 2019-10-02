@@ -267,23 +267,12 @@ $('#myCarouselTab4').on('slide.bs.carousel', function (event) {
 
 $('#myCarouselTab4 .carousel-item-imgs').on('click', function() {
     event.preventDefault();
-    // console.log($(this).attr('data-num'));
     let indexSlide = Number($(this).attr('data-num'));
     $('#myCarouselTab4').carousel(indexSlide);
     $('#sliderScreenTab4').carousel(indexSlide);
 });
 
-
-if ($(window).width() >= 480) {
-    $('#newsletter').attr('size', '48');
-}
 if ($(window).width() >= 481) {
-    $('#newsletter').attr('size', '26');
     $('#newsletter').attr('placeholder', '           Enter your email address');
 }
-if ($(window).width() >= 575) {
-    $('#newsletter').attr('size', '30');
-}
-if ($(window).width() >= 768) {
-    $('#newsletter').attr('size', '62');
-}
+
